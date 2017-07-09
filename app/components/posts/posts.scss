@@ -1,0 +1,61 @@
+@import "../../assets/css/colors";
+
+.posts{
+
+
+  .posts-list{
+    padding-left: 0px;
+
+    .post-item{
+      list-style: none;
+
+      h2{
+        color: $linkColor;
+      }
+
+      .author{
+        color: $linkColor;
+      }
+
+      .tag{
+        background-color: #777;
+        color: $fontColor;
+        font-size: 12px;
+        padding: 4px;
+        margin: 2px;
+        border-radius: 2px;
+      }
+
+      .post-footer{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .pager{
+
+    ul{
+      display: flex;
+      justify-content: space-between;
+
+      li{
+        margin: 10px;
+
+        button{
+          border-radius: 15px;
+          padding: 5px 15px;
+          background: none;
+          border: 1px solid #ddd;
+          color: $linkColor;
+
+
+        }
+        button:hover{
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+}

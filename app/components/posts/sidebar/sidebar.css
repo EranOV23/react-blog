@@ -1,0 +1,8 @@
+.sidebar .input-group {
+  display: flex; }
+  .sidebar .input-group input {
+    border: 1px solid #dddddd;
+    width: 80%;
+    padding: 5px; }
+
+/*# sourceMappingURL=sidebar.css.map */

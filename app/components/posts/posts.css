@@ -1,0 +1,33 @@
+.posts .posts-list {
+  padding-left: 0px; }
+  .posts .posts-list .post-item {
+    list-style: none; }
+    .posts .posts-list .post-item h2 {
+      color: #337ab7; }
+    .posts .posts-list .post-item .author {
+      color: #337ab7; }
+    .posts .posts-list .post-item .tag {
+      background-color: #777;
+      color: white;
+      font-size: 12px;
+      padding: 4px;
+      margin: 2px;
+      border-radius: 2px; }
+    .posts .posts-list .post-item .post-footer {
+      display: flex;
+      justify-content: space-between; }
+.posts .pager ul {
+  display: flex;
+  justify-content: space-between; }
+  .posts .pager ul li {
+    margin: 10px; }
+    .posts .pager ul li button {
+      border-radius: 15px;
+      padding: 5px 15px;
+      background: none;
+      border: 1px solid #ddd;
+      color: #337ab7; }
+    .posts .pager ul li button:hover {
+      opacity: 0.5; }
+
+/*# sourceMappingURL=posts.css.map */

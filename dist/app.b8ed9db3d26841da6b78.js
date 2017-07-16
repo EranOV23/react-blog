@@ -1553,7 +1553,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	function makeEmptyFunction(arg) {
@@ -12073,7 +12073,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 * @typechecks static-only
 	 */
 
@@ -16220,7 +16220,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	/*eslint-disable no-self-compare */
@@ -18045,7 +18045,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	var isTextNode = __webpack_require__(156);
@@ -24960,7 +24960,7 @@
 	$export.B = 16;  // bind
 	$export.W = 32;  // wrap
 	$export.U = 64;  // safe
-	$export.R = 128; // real proto method for `library` 
+	$export.R = 128; // real proto method for `library`
 	module.exports = $export;
 
 /***/ },
@@ -26171,7 +26171,7 @@
 /* 298 */
 /***/ function(module, exports) {
 
-	
+
 
 /***/ },
 /* 299 */
@@ -26547,8 +26547,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js?root=%2FUsers%2FEran%2FDesktop%2Fnetcraft%2Fproject-react%2Freact-blog%2Fapp!../../../node_modules/postcss-loader/index.js!../../../node_modules/sass-loader/index.js?includePaths[]=%2FUsers%2FEran%2FDesktop%2Fnetcraft%2Fproject-react%2Freact-blog%2Fapp!./posts.scss", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js?root=%2FUsers%2FEran%2FDesktop%2Fnetcraft%2Fproject-react%2Freact-blog%2Fapp!../../../node_modules/postcss-loader/index.js!../../../node_modules/sass-loader/index.js?includePaths[]=%2FUsers%2FEran%2FDesktop%2Fnetcraft%2Fproject-react%2Freact-blog%2Fapp!./posts.scss");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js?root=%2FUsers%2FEran%2FDesktop%2Fnetcraft%2Fproject-react%2Freact-blog%2Fapp!../../../node_modules/postcss-loader/index.js!../../../node_modules/sass-loader/index.js?includePaths[]=%2FUsers%2FEran%2FDesktop%2Fnetcraft%2Fproject-react%2Freact-blog%2Fapp!./postsLists.scss", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js?root=%2FUsers%2FEran%2FDesktop%2Fnetcraft%2Fproject-react%2Freact-blog%2Fapp!../../../node_modules/postcss-loader/index.js!../../../node_modules/sass-loader/index.js?includePaths[]=%2FUsers%2FEran%2FDesktop%2Fnetcraft%2Fproject-react%2Freact-blog%2Fapp!./postsLists.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});

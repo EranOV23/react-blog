@@ -16,18 +16,21 @@
     .posts .posts-list .post-item .post-footer {
       display: flex;
       justify-content: space-between; }
-.posts .pager ul {
+.posts .pager {
   display: flex;
   justify-content: space-between; }
-  .posts .pager ul li {
-    margin: 10px; }
-    .posts .pager ul li button {
-      border-radius: 15px;
-      padding: 5px 15px;
-      background: none;
-      border: 1px solid #ddd;
-      color: #337ab7; }
-    .posts .pager ul li button:hover {
-      opacity: 0.5; }
+  .posts .pager a {
+    margin: 5px;
+    border-radius: 15px;
+    padding: 5px 15px;
+    background: none;
+    border: 1px solid #ddd;
+    color: #337ab7; }
+  .posts .pager a:hover {
+    opacity: 0.5; }
+  .posts .pager .disabled {
+    pointer-events: none;
+    cursor: default;
+    color: #dddddd; }
 
 /*# sourceMappingURL=posts.css.map */

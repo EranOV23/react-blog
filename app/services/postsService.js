@@ -1,18 +1,14 @@
+import "isomorphic-fetch";
+
 class PostsService{
 
   constructor() {
-    this.url = "https://jsonplaceholder.typicode.com/posts/";
+    this.url = "../../data/posts.json";
   }
 
   getPosts(){
     console.log("requested posts");
-    fetch(this.url)
-      .then( (respond)=> {
-        console.log(respond)
-        return respond;
-      })
-
-
+    return fetch(this.url).then((response) => {  return (response.json()) })
   }
 
 }

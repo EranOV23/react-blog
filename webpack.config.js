@@ -112,10 +112,14 @@ const config = {
       {
         test: /\.(jpe?g|png|gif|svg)(\?.*)?$/i,
         loader: 'url?limit=5120&name=[path][name].[hash].[ext]'
-      }
+      },
 
-    ]
+    ],
+
   },
+
+  devtool: "source-map",
+
 
   // Settings for webpack-dev-server
   // `--hot` and `--progress` must be set using CLI
@@ -131,11 +135,12 @@ const config = {
     autoprefixer({
       browsers: ['last 2 versions']
     })
-  ]
+  ],
+
 };
 
 if (appEnv === 'development') {
-  config.devtool = '#inline-react-blog-map';
+  config.devtool = '#inline-source-map';
 }
 
 if (appEnv === 'production') {

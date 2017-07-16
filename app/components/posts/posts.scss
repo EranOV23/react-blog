@@ -34,28 +34,29 @@
   }
 
   .pager{
+    display: flex;
+    justify-content: space-between;
 
-    ul{
-      display: flex;
-      justify-content: space-between;
+    a{
+      margin: 5px;
+      border-radius: 15px;
+      padding: 5px 15px;
+      background: none;
+      border: 1px solid #ddd;
+      color: $linkColor;
 
-      li{
-        margin: 10px;
-
-        button{
-          border-radius: 15px;
-          padding: 5px 15px;
-          background: none;
-          border: 1px solid #ddd;
-          color: $linkColor;
-
-
-        }
-        button:hover{
-          opacity: 0.5;
-        }
-      }
     }
+
+    a:hover{
+      opacity: 0.5;
+    }
+
+    .disabled{
+      pointer-events: none;
+      cursor: default;
+      color: #dddddd;
+    }
+
   }
 
 }

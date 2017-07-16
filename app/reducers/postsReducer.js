@@ -1,11 +1,12 @@
-import {ADD_POST} from '../constants';
+import {GET_POSTS_RESPOND} from '../constants';
 
 
 function postsReducer (state = null, action){
 
   switch(action.type){
-    case ADD_POST:
-      return [...state, action.post];
+
+    case GET_POSTS_RESPOND:
+      return [...state, ...action.response.posts];
   }
 
   return state

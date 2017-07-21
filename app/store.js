@@ -11,7 +11,10 @@ const reducers = combineReducers({
 let middlewares = applyMiddleware(thunk);
 
 const initState = {
-  posts : []
+  posts : {
+    postsList : [],
+    allPostsLength: 0,
+  }
 };
 
 const store = createStore(

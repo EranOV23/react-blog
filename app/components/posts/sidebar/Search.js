@@ -1,28 +1,41 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Route, Redirect} from 'react-router';
+import {Route, Redirect, withRouter} from 'react-router';
 
 
 class Search extends React.Component {
 
     constructor(props){
       super(props);
+      this.state = {
+        redirect: false,
+        postQuery: "",
+      }
     }
 
-    redirect(postQuery){
-      console.log("redirect to " + postQuery);
-      <Redirect to={postQuery}/>
+    redirect(userInput){
+      let postQuery = userInput.replace(' ','_');
+      this.setState({
+        redirect: true,
+        postQuery: postQuery,
+      })
+
     }
 
     render() {
-        return (
+
+      if(this.state.redirect)
+        return <Redirect to={`/posts?search=${this.state.postQuery}`}/>;
+
+      else
+        return(
           <div className="well">
             <h4>Search</h4>
             <from>
               <div className="input-group">
                 <input type="search" name="search" ref={ (e) => this.value = e}/>
                 <span className="input-group-btn">
-                <button className="btn btn-default" type="submit" onClick={ () => this.redirect(`/posts?${this.value.value}`) }>
+                <button className="btn btn-default" type="submit" onClick={ () => this.redirect(this.value.value) }>
                   <span className="glyphicon glyphicon-search"></span>
                 </button>
               </span>
@@ -46,4 +59,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search));

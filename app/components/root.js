@@ -1,15 +1,13 @@
 import React from 'react';
-import {Route, Redirect, withRouter} from 'react-router-dom';
+import {Route, Redirect, withRouter} from 'react-router';
+
 import NavBar from './nav/NavBar';
 import Admin from './admin/Admin';
 import Posts from './posts/Posts';
-import {connect} from 'react-redux';
-import {getAllPosts} from '../actions/creators';
 
 class Root extends React.Component {
   constructor(props){
     super(props);
-    this.props.getAllPosts();
 
   }
 
@@ -25,10 +23,4 @@ class Root extends React.Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return{
-    getAllPosts: () => dispatch(getAllPosts()),
-  }
-}
-
-export default withRouter(connect(null, mapDispatchToProps)(Root));
+export default withRouter(Root)

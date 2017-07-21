@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom'
+import {withRouter} from 'react-router';
+
 
 class Pager extends React.Component {
     constructor(props){
@@ -12,11 +14,11 @@ class Pager extends React.Component {
           <div className="pager">
             <NavLink to={`/posts/${parseInt(this.props.page) - 1}`}
                      className={this.props.page <=1 ? "disabled" : ""}>
-              <small className="glyphicon glyphicon-arrow-left"></small> Older
+              <small className="glyphicon glyphicon-arrow-left"></small> Newer
             </NavLink>
             <NavLink to={`/posts/${parseInt(this.props.page) + 1}`}
-                     className={this.props.page >= Math.ceil(this.props.posts.length/3 ) ? "disabled" : ""}>
-              Newer <next className="glyphicon glyphicon-arrow-right"></next>
+                     className={this.props.page >= Math.ceil(this.props.allPostsLength/3 ) ? "disabled" : ""}>
+              Older <next className="glyphicon glyphicon-arrow-right"></next>
             </NavLink>
           </div>
         )
@@ -26,8 +28,8 @@ class Pager extends React.Component {
 
 function mapStateToProps(state) {
     return {
-      posts: state.posts,
+      allPostsLength: state.posts.allPostsLength,
     }
 }
 
-export default connect(mapStateToProps, null)(Pager)
+export default withRouter(connect(mapStateToProps, null)(Pager))

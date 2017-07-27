@@ -13,18 +13,24 @@ class PostsService{
 
   getPostsRange(from, to){
       return fetch(this.url)
-        .then((response) => {  return (response.json()) })
+        .then((response) => { return (response.json()) })
         .then( (data) => data.posts.slice(from, to) )
   }
 
   getPostsLength(){
     console.log("requested posts Length");
     return fetch(this.url)
-      .then((response) => {  return (response.json()) })
+      .then((response) => { return (response.json()) })
       .then( response => response.posts.length )
+  }
+
+  getPostPage(title){
+    return fetch(`../data/posts/html/${title}.html`)
+      .then( response => response.text() )
+      .then( response => response )
   }
 
 
 }
 
-module.exports = new PostsService();
+export default module.exports = new PostsService();

@@ -31,5 +31,8 @@ export function getPostsLength(){
 
 export function setPostsLength(length){
   return {type: ACTIONS.SET_POSTS_LENGTH, length };
+}
 
+export function setPostPageInfo(info){
+  return {type: ACTIONS.SET_POST_PAGE_INFO, info };
 }

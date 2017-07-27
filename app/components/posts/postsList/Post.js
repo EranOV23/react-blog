@@ -1,20 +1,55 @@
 import React from 'react';
 import moment from 'moment';
+import { NavLink } from 'react-router-dom';
+import {connect} from 'react-redux';
+import {setPostPageInfo} from '../../../actions/creators';
 
-export default class Post extends React.Component{
+
+class Post extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
+
+  sendPostInfo(){
+    let info = {
+      title: this.props.post.title,
+      author: this.props.post.author,
+      date: this.props.post.date,
+      tags: this.props.post.tags,
+    };
+
+    this.props.setPostPageInfo(info);
+
+  }
+
   render(){
     return(
       <li className="post-item">
-        <h2>{this.props.post.title}</h2>
+        <NavLink to={`/post/${this.props.post.title}`} onClick={()=> this.sendPostInfo()} >
+          <h2>{this.props.post.title}</h2>
+        </NavLink>
         <p><small className="glyphicon glyphicon-user"></small>By<span className="author">{this.props.post.author}</span></p>
         <p><small className="glyphicon glyphicon-time"></small>Posted on {moment(parseInt(this.props.post.date)).format("DD MMM, YYYY") }</p>
         <p>{this.props.post.description}</p>
         <div className="post-footer">
           <p><strong>Tags: </strong>{this.props.post.tags.map((tag, i) => {return <span className="tag" key={i}> {tag} </span>})}</p>
-          <button className="btn btn-primary">Read more</button>
+          <NavLink to={`/post/${this.props.post.title}`}>
+            <button className="btn btn-primary">Read more</button>
+          </NavLink>
         </div>
         <hr/>
       </li>
     )
   }
 }
+
+
+
+function mapDispatchToProps(dispatch) {
+  return {
+    setPostPageInfo: (info) => dispatch(setPostPageInfo(info))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Post)

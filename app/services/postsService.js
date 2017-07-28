@@ -24,12 +24,18 @@ class PostsService{
       .then( response => response.posts.length )
   }
 
-  getPostPage(title){
+  getPostHtml(title){
     return fetch(`../data/posts/html/${title}.html`)
       .then( response => response.text() )
-      .then( response => response )
+      .then( response => response );
   }
 
+  getPostInfo(title){
+      return fetch(`../data/posts.json`)
+      .then( response => response.json() )
+      .then( response => response.posts.filter( (post) => post.title === title ) )
+      .then( response => response[0])
+  }
 
 }
 

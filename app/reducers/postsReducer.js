@@ -1,4 +1,4 @@
-import {GET_POSTS_RESPOND, GET_POSTS_LENGTH, SET_POSTS_LENGTH, SET_POST_PAGE_INFO} from '../constants';
+import {GET_POSTS_RESPOND, GET_POSTS_LENGTH, SET_POSTS_LENGTH} from '../constants';
 import { combineReducers } from 'redux';
 
 
@@ -27,21 +27,9 @@ function postsLengthReducer (state = null, action){
 }
 
 
-function postPageReducer (state = null, action){
-  console.log(state);
-  console.log(action);
-  switch(action.type){
-    case SET_POST_PAGE_INFO:
-      return action.info;
-  }
-
-  return state
-}
-
 
 export default combineReducers({
   // Reducers go here
   postsList: postsListReducer,
   allPostsLength: postsLengthReducer,
-  postPage: postPageReducer,
 });

@@ -14,7 +14,6 @@ const initState = {
   posts : {
     postsList : [],
     allPostsLength: 0,
-    postPage: {},
   }
 };
 

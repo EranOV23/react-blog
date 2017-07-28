@@ -1,3 +1,14 @@
+@import "../../../assets/css/colors";
+
 .post-page{
   display: flex;
+
+  .tag{
+    background-color: #777;
+    color: $fontColor;
+    font-size: 12px;
+    padding: 4px;
+    margin: 2px;
+    border-radius: 2px;
+  }
 }

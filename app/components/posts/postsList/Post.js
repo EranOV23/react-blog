@@ -1,36 +1,21 @@
 import React from 'react';
 import moment from 'moment';
 import { NavLink } from 'react-router-dom';
-import {connect} from 'react-redux';
-import {setPostPageInfo} from '../../../actions/creators';
 
 
-class Post extends React.Component{
+export default class Post extends React.Component{
   constructor(props){
     super(props);
-  }
-
-
-  sendPostInfo(){
-    let info = {
-      title: this.props.post.title,
-      author: this.props.post.author,
-      date: this.props.post.date,
-      tags: this.props.post.tags,
-    };
-
-    this.props.setPostPageInfo(info);
-
   }
 
   render(){
     return(
       <li className="post-item">
-        <NavLink to={`/post/${this.props.post.title}`} onClick={()=> this.sendPostInfo()} >
+        <NavLink to={`/post/${this.props.post.title}`}>
           <h2>{this.props.post.title}</h2>
         </NavLink>
-        <p><small className="glyphicon glyphicon-user"></small>By<span className="author">{this.props.post.author}</span></p>
-        <p><small className="glyphicon glyphicon-time"></small>Posted on {moment(parseInt(this.props.post.date)).format("DD MMM, YYYY") }</p>
+        <p><small className="glyphicon glyphicon-user"></small> By <span className="author">{this.props.post.author}</span></p>
+        <p><small className="glyphicon glyphicon-time"></small> Posted on {moment(parseInt(this.props.post.date)).format("DD MMM, YYYY") }</p>
         <p>{this.props.post.description}</p>
         <div className="post-footer">
           <p><strong>Tags: </strong>{this.props.post.tags.map((tag, i) => {return <span className="tag" key={i}> {tag} </span>})}</p>
@@ -43,13 +28,3 @@ class Post extends React.Component{
     )
   }
 }
-
-
-
-function mapDispatchToProps(dispatch) {
-  return {
-    setPostPageInfo: (info) => dispatch(setPostPageInfo(info))
-  }
-}
-
-export default connect(null, mapDispatchToProps)(Post)

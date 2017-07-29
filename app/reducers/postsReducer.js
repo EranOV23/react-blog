@@ -26,10 +26,17 @@ function postsLengthReducer (state = null, action){
   return state
 }
 
+function fillersReducer (state = null, action){
+  switch(action.type){
+  }
+  return state
+}
+
 
 
 export default combineReducers({
   // Reducers go here
   postsList: postsListReducer,
   allPostsLength: postsLengthReducer,
+  fillers: fillersReducer,
 });

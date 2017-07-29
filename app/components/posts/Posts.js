@@ -79,15 +79,25 @@ class Posts extends React.Component {
     );
 
     else if(this.props.location.search){
-      return (
-        <div className="container posts">
-            <div className="col-md-8">
-              <PostsList posts={this.state.postBySearch}/>
-            </div>
-            <SideBar/>
-        </div>
-      );
-
+        return (
+          <div className="container posts">
+              <div className="col-md-8">
+                {
+                  this.state.postBySearch.length <= 0
+                  ? <div>
+                      <h2>{`Could not find any posts matching: '${this.state.query}' `}</h2>
+                      <hr/>
+                    </div>
+                  : <div>
+                      <h2>{`Showing results matching: '${this.state.query}' `}</h2>
+                      <hr/>
+                      <PostsList query={this.state.query} posts={this.state.postBySearch}/>
+                    </div>
+                }
+              </div>
+              <SideBar/>
+          </div>
+        );
     }
 
     else return <div></div>;

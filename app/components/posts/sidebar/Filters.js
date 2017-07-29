@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 class Filters extends React.Component {
 
     render() {
+      console.log(this.props.fillers);
         return (
           <div className="well">
             <h3>Filters Posts</h3>
@@ -42,7 +43,8 @@ class Filters extends React.Component {
 
 function mapStateToProps(state) {
     return {
-      allPostsLength: state.posts.allPostsLength
+      allPostsLength: state.posts.allPostsLength,
+      fillers: state.posts.fillers
     }
 }
 

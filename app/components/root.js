@@ -17,6 +17,7 @@ class Root extends React.Component {
       <div>
         <Route path="/" component={NavBar}/>
         <Route exact path="/" render={ () => <Redirect to="/posts/1"/> }/>
+        <Route path="/posts" component={Posts}/>
         <Route path="/posts/:page" component={Posts}/>
         <Route path="/post/:title" component={PostPage}/>
         <Route path="/admin" component={Admin}/>

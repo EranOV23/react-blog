@@ -37,6 +37,14 @@ class PostsService{
       .then( response => response[0])
   }
 
+  searchPosts(query){
+    return fetch(this.url)
+      .then(response => response.json())
+      .then(response => response.posts.filter( (post) => {
+        return JSON.stringify(post).toLowerCase().includes(query.toLowerCase())
+      }) )
+  }
+
 }
 
 export default module.exports = new PostsService();

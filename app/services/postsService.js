@@ -1,4 +1,5 @@
 import "isomorphic-fetch";
+import moment from 'moment';
 
 class PostsService{
 
@@ -37,11 +38,17 @@ class PostsService{
       .then( response => response[0])
   }
 
-  searchPosts(query){
+  searchPosts(type, query){
+    console.log(type, query);
     return fetch(this.url)
       .then(response => response.json())
       .then(response => response.posts.filter( (post) => {
-        return JSON.stringify(post).toLowerCase().includes(query.toLowerCase())
+        if(type === "search")
+          return JSON.stringify(post).toLowerCase().includes(query.toLowerCase());
+        else if( type === "category")
+          return JSON.stringify(post.tags).toLowerCase().includes(query.toLowerCase());
+        else if( type ==="authors")
+          return JSON.stringify(post.author).toLowerCase().includes(query.toLowerCase());
       }) )
   }
 

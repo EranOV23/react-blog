@@ -14,12 +14,13 @@ const initState = {
   posts : {
     postsList : [],
     allPostsLength: 0,
-    fillers: [
-      'showAll',
-      {Category: ['AngularJS', 'Grunt', 'JavaScript', 'JQuery', 'Tools']},
-      {Author: ['Alex Ilyae', 'Amit Choukroun', 'Ilan Cohen']},
-      {Month: [{2015: 'January'}, {2014: 'December'} ]},
-    ],
+    fillers: {
+      showAll:  'showAll',
+      Category: ['AngularJS', 'Grunt', 'JavaScript', 'JQuery', 'Tools'],
+      Author: ['Alex Ilyae', 'Amit Choukroun', 'Ilan Cohen'],
+      Month: [{2015: 'January'}, {2014: 'December'}],
+    },
+
   }
 };
 

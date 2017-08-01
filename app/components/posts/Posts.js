@@ -21,6 +21,8 @@ class Posts extends React.Component {
       sliceStart: props.match.params.page * 3 - 3,
       sliceEnd: props.match.params.page * 3,
       postBySearch: [],
+      type: "",
+      query: "",
     };
 
     this.postsLength();
@@ -35,21 +37,23 @@ class Posts extends React.Component {
         page: match.params.page,
         sliceStart: match.params.page * 3 - 3,
         sliceEnd: match.params.page * 3,
-        query: "",
       });
     }
 
     if(location.search){
-      let query = location.search.replace("?search=", "");
-      this.setState({query});
-      this.searchPosts(query)
+      let type = location.search.split("=")[0].slice(1);
+      let query = location.search.split("=")[1];
+      this.setState({
+        type: type,
+        query: query,
+      });
+      this.searchPosts(type, query);
     }
 
   }
 
-  searchPosts(query){
-    console.log(query);
-    PostsService.searchPosts(query)
+  searchPosts(type, query){
+    PostsService.searchPosts(type, query)
       .then( (posts) => this.setState({
         postBySearch: posts
       }) );
@@ -85,7 +89,7 @@ class Posts extends React.Component {
                 {
                   this.state.postBySearch.length <= 0
                   ? <div>
-                      <h2>{`Could not find any posts matching: '${this.state.query}' `}</h2>
+                      <h2>{`Could not find any posts matching: ${this.state.query} `}</h2>
                       <hr/>
                     </div>
                   : <div>

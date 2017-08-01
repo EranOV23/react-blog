@@ -32,8 +32,6 @@ function fillersReducer (state = null, action){
   return state
 }
 
-
-
 export default combineReducers({
   // Reducers go here
   postsList: postsListReducer,

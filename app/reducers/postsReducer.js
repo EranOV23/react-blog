@@ -1,4 +1,4 @@
-import {GET_POSTS_RESPOND, GET_POSTS_LENGTH, SET_POSTS_LENGTH} from '../constants';
+import {GET_POSTS_RESPOND, GET_POSTS_LENGTH, SET_POSTS_LENGTH, SET_POST_TO_EDIT} from '../constants';
 import { combineReducers } from 'redux';
 
 
@@ -8,7 +8,6 @@ function postsListReducer (state = null, action){
     case GET_POSTS_RESPOND:
       return [...action.response];
   }
-
   return state
 }
 
@@ -31,6 +30,7 @@ function fillersReducer (state = null, action){
   }
   return state
 }
+
 
 export default combineReducers({
   // Reducers go here

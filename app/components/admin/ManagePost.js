@@ -1,76 +1,65 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import PostsService from '../../services/postsService';
+import PostForm from './PostForm';
 
-class AddPost extends React.Component {
-    constructor(){
-      super();
+export default class AddPost extends React.Component {
+    constructor(props){
+      super(props);
       this.state = {
-        post: {
-          title: "",
-        },
+        title: "",
+        author: "",
+        date: "",
+        tags: [],
+        mdPath: "",
+        htmlPath: "",
+        description: "",
+      };
+
+      if(this.props.match.params.post){
+        this.getPostToEdit(this.props.match.params.post);
+      }
+
+      this.edit = this.edit.bind(this);
+
+    }
+
+    getPostToEdit(postTitle){
+      PostsService.getPostToEdit(postTitle)
+        .then( (post)=> this.setPost(post) )
+    }
+
+    setPost({title, author, date, tags, mdPath, htmlPath, description}){
+      this.setState({title, author, date, tags, mdPath, htmlPath, description})
+    }
+
+    edit(e){
+      console.log(e.target.name, e.target.value);
+      if(e.target.name === "tags"){
+        let tags = e.target.value.split(",");
+        console.log(tags);
+        this.setState({[e.target.name]: tags});
+
+      }
+      else{
+        let value = e.target.value;
+        this.setState({[e.target.name]: value});
       }
     }
 
-    savePost(e, postTitle){
-      e.preventDefault();
-      console.log(e, postTitle)
+    savePost(e, post){
+      console.log(e, post);
+      this.setPost(post)
     }
 
     render() {
-        return (
+      return (
           <div className="container">
             <div className="row">
               <div className="col-sm-12">
                 <h2 className="page-header">Add New Post</h2>
-                <form action="">
-                  <div className="row">
-                    <div className="col-sm-6">
-                      <div className="form-group required">
-                        <label htmlFor="postTitle">Title</label>
-                        <input type="text" className="form-control" id="postTitle" name="postTitle" placeholder="Post Title" value={this.state.post.title} required autoFocus/>
-                      </div>
-                      <div className="form-group required">
-                        <label htmlFor="postAuthor">Author</label>
-                        <input type="text" className="form-control" id="postAuthor" name="postAuthor" placeholder="Post Author" required autoFocus/>
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="postTags">Tags</label>
-                        <input type="text" className="form-control" id="postTags" name="postTags" placeholder="Post Tags" autoFocus/>
-                        <p className="help-block">Separate multiple tags with a comma. e.g.<code>Grunt,Tools</code></p>
-                      </div>
-                    </div>
-                    <div className="col-sm-6">
-                      <div className="form-group required">
-                        <label htmlFor="postDescription">Description</label>
-                        <textarea type="text" className="form-control" rows={10} id="postDescription" name="postDescription" placeholder="Post Description" required autoFocus/>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <hr/>
-
-                  <div className="row">
-                    <div className="col-sm-6">
-                      <div className="form-group required">
-                        <label htmlFor="postMd">Markdown</label>
-                        <textarea type="text" className="form-control previewPane" rows={20} id="postMd" name="postMd" placeholder="Post Markdown" required autoFocus/>
-                      </div>
-                    </div>
-                    <div className="col-sm-6">
-                      <div className="form-group required">
-                        <label >HTML Preview (read only)</label>
-                        <div className="form-control previewPane"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <hr/>
-
-                  <button type="submit" className="btn btn-primary" onClick={ (e) => this.savePost(e) }>Save Post</button>
-
-
-                </form>
+                <PostForm post={this.state}
+                          onChange={(e)=>this.edit(e)}
+                          onClick={(e, post)=>this.savePost(e, post)}/>
               </div>
             </div>
             <hr/>
@@ -79,14 +68,3 @@ class AddPost extends React.Component {
         )
     }
 }
-
-
-function mapStateToProps(state) {
-    return {}
-}
-
-function mapDispatchToProps(dispatch) {
-    return {}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(AddPost)

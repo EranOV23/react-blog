@@ -4,24 +4,23 @@ import moment from 'moment';
 class PostsService{
 
   constructor(){
-    this.url = "../../data/posts.json";
+    // this.url = '../data/posts.json';
+    this.url = `/api/posts`;
   }
 
   getAllPosts(){
-    console.log("requested posts");
-    return fetch(this.url).then((response) => {  return (response.json()) })
+    console.log("requested All Posts");
+    return fetch(this.url).then(response => response.json());
   }
 
   getPostsRange(from, to){
-      return fetch(this.url)
-        .then((response) => { return (response.json()) })
+    return this.getAllPosts()
         .then( (data) => data.posts.slice(from, to) )
   }
 
   getPostsLength(){
     console.log("requested posts Length");
-    return fetch(this.url)
-      .then((response) => { return (response.json()) })
+    return this.getAllPosts()
       .then( response => response.posts.length )
   }
 
@@ -32,23 +31,30 @@ class PostsService{
   }
 
   getPostInfo(title){
-      return fetch(`../data/posts.json`)
-      .then( response => response.json() )
+    return this.getAllPosts()
       .then( response => response.posts.filter( (post) => post.title === title ) )
       .then( response => response[0])
   }
 
+  getPostToEdit(title){
+    return this.getAllPosts()
+      .then(response => response.posts.filter( (post) => post.title === title ) )
+      .then( response => response[0])
+  }
+
   searchPosts(type, query){
-    console.log(type, query);
-    return fetch(this.url)
-      .then(response => response.json())
+    console.log(`search and filter posts by: ${type} - ${query}`);
+    return this.getAllPosts()
       .then(response => response.posts.filter( (post) => {
         if(type === "search")
           return JSON.stringify(post).toLowerCase().includes(query.toLowerCase());
         else if( type === "category")
           return JSON.stringify(post.tags).toLowerCase().includes(query.toLowerCase());
-        else if( type ==="authors")
+        else if( type === "authors")
           return JSON.stringify(post.author).toLowerCase().includes(query.toLowerCase());
+        else if( type === "month"){
+          return JSON.stringify(moment(parseInt(post.date)).format("MMMM-YYYY")).includes(query);
+        }
       }) )
   }
 

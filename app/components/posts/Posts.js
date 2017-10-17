@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
 
 
-import SideBar from './sidebar/SideBar';
+import SideBar from '../sidebar/SideBar';
 import PostsList from './postsList/PostsList';
 import Pager from './pager/Pager';
 

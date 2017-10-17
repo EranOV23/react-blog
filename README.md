@@ -2,7 +2,8 @@
 
 ## Init
 
-Run `npm install` and then `npm start`
+Run `npm install` and then:
+`npm start` + 'npm run server'
 
 ## Instructions
 

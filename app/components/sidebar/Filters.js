@@ -6,6 +6,17 @@ import {withRouter} from 'react-router';
 
 class Filters extends React.Component {
 
+    isLinkActive(filter, search){
+      if(typeof filter === "object"){
+        if(`${filter[Object.keys(filter)]}-${Object.keys(filter)}` === search.split("=")[1])
+          return true;
+      }
+      else if(filter.toLowerCase()===search.split("=")[1])
+        return true;
+      else
+        return false;
+    }
+
     render() {
         return (
           <div className="well">
@@ -25,34 +36,36 @@ class Filters extends React.Component {
                     pathname: "/posts",
                     search: `?category=${filter.toLowerCase()}`
                   }}
-                  isActive={()=> {
-                    if(filter.toLowerCase()===this.props.location.search.split("=")[1])
-                      return true;
-                    else
-                      return false;
-                  }}>
+                  isActive={ () => { return this.isLinkActive(filter, this.props.location.search)}}>
                   {filter}
                 </NavLink>)}
             </div>
             <h4><small className="glyphicon glyphicon-user"></small> Author</h4>
             <div className="list-group">
               {this.props.authorsFillers.map( (filter, i ) =>
-                <NavLink key={i} exact to={{
-                  pathname: "/posts",
-                  search: `?authors=${filter.toLowerCase()}`
-                }} className="list-group-item">
-                  {filter}
+                <NavLink key={i}
+                 activeClassName="active"
+                 className="list-group-item"
+                 exact to={{
+                    pathname: "/posts",
+                    search: `?authors=${filter.toLowerCase()}`
+                 }}
+                 isActive={ () => { return this.isLinkActive(filter, this.props.location.search)}}>
+                 {filter}
                 </NavLink>)}
             </div>
             <h4><small className="glyphicon glyphicon-time"></small> Month</h4>
             {this.props.monthsFillers.map( (filter, i) => {
               return (<div key={i} className="list-group">
-                <span className="list-group-item disabled">{Object.keys(filter)}</span>
-                <NavLink exact to={{
+                <span className="list-group-item">{Object.keys(filter)}</span>
+                <NavLink
+                  activeClassName="active"
+                  className="list-group-item"
+                  exact to={{
                     pathname: "/posts",
-                    search: `?${Object.keys(filter)}=${filter[Object.keys(filter)]}`
+                    search: `?month=${filter[Object.keys(filter)]}-${Object.keys(filter)}`
                   }}
-                  className="list-group-item">
+                  isActive={ () => { return this.isLinkActive(filter, this.props.location.search)}}>
                   {filter[Object.keys(filter)]}
                 </NavLink>
               </div>)
@@ -62,7 +75,6 @@ class Filters extends React.Component {
     }
 }
 
-
 function mapStateToProps(state) {
     return {
       allPostsLength: state.posts.allPostsLength,
@@ -71,6 +83,5 @@ function mapStateToProps(state) {
       monthsFillers: state.posts.fillers.Month,
     }
 }
-
 
 export default withRouter(connect(mapStateToProps, null)(Filters));

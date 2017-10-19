@@ -13,15 +13,15 @@ app.route("/api/posts")
     console.log('Requested node server');
     res.json(posts);
   })
-  // .post((req,res)=>{
-  //   console.log(posts.posts);
-  //   let postsArr = posts.posts;
-  //   postsArr.push(req.body)
-  //   console.log(postsArr);
-  //   console.log(`post: ${req.body.title}`)
-  //   res.writeHead(302, {'Location': '/#/admin'});
-  //   res.end();
-  // });
+  .post((req,res)=>{
+    console.log(posts.posts);
+    let postsArr = posts.posts;
+    postsArr.push(req.body);
+    console.log(postsArr);
+    console.log(`post: ${req.body.title}`);
+    res.writeHead(302, {'Location': '/#/admin'});
+    res.end();
+  });
 
 
 app.listen(9090);

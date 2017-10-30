@@ -6,15 +6,32 @@ import Admin from './admin/Admin';
 import Posts from './posts/Posts';
 import PostPage from './posts/postPage/PostPage';
 import ManagePost from './admin/ManagePost';
+import ErrorMessage from './error-message/ErrorMessage'
 
 class Root extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      error: null, 
+      errorInfo: null
+    }
+  }
 
+  componentDidCatch(error, errorInfo){
+    this.setState({
+      error: error,
+      errorInfo: errorInfo
+    })  
   }
 
   render() {
-    return (
+    if(this.state.errorInfo){
+      return(
+        <ErrorMessage error={this.state.error} errorInfo={this.state.errorInfo}/>
+      )
+    }
+
+    else return (
       <div>
         <Route path="/" component={NavBar}/>
         <Route exact path="/" render={ () => <Redirect to="/posts/1"/> }/>

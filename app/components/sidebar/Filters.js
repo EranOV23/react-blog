@@ -28,7 +28,7 @@ class Filters extends React.Component {
             </div>
             <h4><small className="glyphicon glyphicon-tag"></small> Category</h4>
             <div className="list-group">
-              {this.props.categoriesFillers.map( (filter, i ) =>
+              {this.props.categoriesFillters.map( (filter, i ) =>
                 <NavLink key={i}
                   activeClassName="active"
                   className="list-group-item"
@@ -42,7 +42,7 @@ class Filters extends React.Component {
             </div>
             <h4><small className="glyphicon glyphicon-user"></small> Author</h4>
             <div className="list-group">
-              {this.props.authorsFillers.map( (filter, i ) =>
+              {this.props.authorsFillters.map( (filter, i ) =>
                 <NavLink key={i}
                  activeClassName="active"
                  className="list-group-item"
@@ -55,7 +55,7 @@ class Filters extends React.Component {
                 </NavLink>)}
             </div>
             <h4><small className="glyphicon glyphicon-time"></small> Month</h4>
-            {this.props.monthsFillers.map( (filter, i) => {
+            {this.props.monthsFillters.map( (filter, i) => {
               return (<div key={i} className="list-group">
                 <span className="list-group-item">{Object.keys(filter)}</span>
                 <NavLink
@@ -78,9 +78,9 @@ class Filters extends React.Component {
 function mapStateToProps(state) {
     return {
       allPostsLength: state.posts.allPostsLength,
-      categoriesFillers: state.posts.fillers.Category,
-      authorsFillers: state.posts.fillers.Author,
-      monthsFillers: state.posts.fillers.Month,
+      categoriesFillters: state.posts.fillters.Category,
+      authorsFillters: state.posts.fillters.Author,
+      monthsFillters: state.posts.fillters.Month,
     }
 }
 

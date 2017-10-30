@@ -60,9 +60,9 @@ class Posts extends React.Component {
   }
 
   postsLength(){
-    if(localStorage.getItem('postsLength'))
-      this.props.setPostsLength(parseInt(localStorage.getItem('postsLength')));
-    else
+    // if(localStorage.getItem('postsLength'))
+    //   this.props.setPostsLength(parseInt(localStorage.getItem('postsLength')));
+    // else
       this.props.getPostsLength();
   }
 

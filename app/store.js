@@ -16,9 +16,9 @@ const initState = {
     allPostsLength: 0,
     filters: {
       showAll:  'showAll',
-      Category: ['AngularJS', 'Grunt', 'JavaScript', 'JQuery', 'Tools'],
-      Author: ['Alex Ilyae', 'Amit Choukroun', 'Ilan Cohen'],
-      Month: [{2015: 'January'}, {2014: 'December'}],
+      Category: [],
+      Author: [],
+      Month: [],
     }
   }
 };

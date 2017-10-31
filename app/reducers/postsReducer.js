@@ -1,5 +1,6 @@
 import {GET_POSTS_RESPOND, GET_POSTS_LENGTH, SET_POSTS_LENGTH, SET_POST_TO_EDIT} from '../constants';
 import { combineReducers } from 'redux';
+import filtersReducer from './filtersReducer';
 
 
 function postsListReducer (state = null, action){
@@ -25,16 +26,9 @@ function postsLengthReducer (state = null, action){
   return state
 }
 
-function filltersReducer (state = null, action){
-  switch(action.type){
-  }
-  return state
-}
-
-
 export default combineReducers({
   // Reducers go here
   postsList: postsListReducer,
   allPostsLength: postsLengthReducer,
-  fillters: filltersReducer,
+  filters: filtersReducer,
 });

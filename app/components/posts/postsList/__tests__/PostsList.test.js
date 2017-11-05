@@ -22,7 +22,7 @@ describe('PostsList', () => {
       }
     ],
     query: "",
-  }
+  };
 
   it('renders correctly' , () => {
     const wrapper = shallow(

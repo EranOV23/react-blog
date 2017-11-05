@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostsList renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PostsList
+    posts={
+      Array [
+        Object {
+          "author": "Ilan Cohen",
+          "date": "1421186400000",
+          "description": "You can think of a module as a container",
+          "htmlPath": "data/posts/html/AngularJS - Modules.html",
+          "mdPath": "data/posts/md/AngularJS - Modules.md",
+          "tags": Array [
+            "JavaScript",
+            "AngularJS",
+          ],
+          "title": "AngularJS - Modules",
+        },
+      ]
+    }
+    query=""
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Post
+          post={
+            Object {
+              "author": "Ilan Cohen",
+              "date": "1421186400000",
+              "description": "You can think of a module as a container",
+              "htmlPath": "data/posts/html/AngularJS - Modules.html",
+              "mdPath": "data/posts/md/AngularJS - Modules.md",
+              "tags": Array [
+                "JavaScript",
+                "AngularJS",
+              ],
+              "title": "AngularJS - Modules",
+            }
+          }
+        />,
+      ],
+      "className": "posts-list",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "class",
+        "props": Object {
+          "post": Object {
+            "author": "Ilan Cohen",
+            "date": "1421186400000",
+            "description": "You can think of a module as a container",
+            "htmlPath": "data/posts/html/AngularJS - Modules.html",
+            "mdPath": "data/posts/md/AngularJS - Modules.md",
+            "tags": Array [
+              "JavaScript",
+              "AngularJS",
+            ],
+            "title": "AngularJS - Modules",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "ul",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Post
+            post={
+              Object {
+                "author": "Ilan Cohen",
+                "date": "1421186400000",
+                "description": "You can think of a module as a container",
+                "htmlPath": "data/posts/html/AngularJS - Modules.html",
+                "mdPath": "data/posts/md/AngularJS - Modules.md",
+                "tags": Array [
+                  "JavaScript",
+                  "AngularJS",
+                ],
+                "title": "AngularJS - Modules",
+              }
+            }
+          />,
+        ],
+        "className": "posts-list",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "class",
+          "props": Object {
+            "post": Object {
+              "author": "Ilan Cohen",
+              "date": "1421186400000",
+              "description": "You can think of a module as a container",
+              "htmlPath": "data/posts/html/AngularJS - Modules.html",
+              "mdPath": "data/posts/md/AngularJS - Modules.md",
+              "tags": Array [
+                "JavaScript",
+                "AngularJS",
+              ],
+              "title": "AngularJS - Modules",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "ul",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

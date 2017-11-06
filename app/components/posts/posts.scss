@@ -2,35 +2,11 @@
 
 .posts{
 
+  display: flex;
+  justify-content: space-around;
 
-  .posts-list{
-    padding-left: 0px;
-
-    .post-item{
-      list-style: none;
-
-      h2{
-        color: $linkColor;
-      }
-
-      .author{
-        color: $linkColor;
-      }
-
-      .tag{
-        background-color: #777;
-        color: $fontColor;
-        font-size: 12px;
-        padding: 4px;
-        margin: 2px;
-        border-radius: 2px;
-      }
-
-      .post-footer{
-        display: flex;
-        justify-content: space-between;
-      }
-    }
+  .main{
+    width: 80%;
   }
 
   .pager{

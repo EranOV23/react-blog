@@ -2,6 +2,7 @@ module.exports = {
     "posts": [
       {
         "title": "AngularJS - Controllers",
+        "img": "https://i.pinimg.com/564x/c4/cb/80/c4cb802ab0f22028489d248f61942103.jpg",
         "author": "Ilan Cohen",
         "date": "1421186400000",
         "tags": ["JavaScript", "AngularJS"],
@@ -11,6 +12,7 @@ module.exports = {
       },
       {
         "title": "AngularJS - Modules",
+        "img": "https://i.pinimg.com/564x/6c/cc/4e/6ccc4e1c86b43f1b9e84fcef5f92e7a4.jpg",
         "author": "Ilan Cohen",
         "date": "1421186400000",
         "tags": ["JavaScript", "AngularJS"],
@@ -20,6 +22,7 @@ module.exports = {
       },
       {
         "title": "AngularJS - Routes",
+        "img": "https://i.pinimg.com/564x/70/0f/46/700f46ea06c717b8e62949390e734b76.jpg",
         "author": "Ilan Cohen",
         "date": "1421186400000",
         "tags": ["JavaScript", "AngularJS"],
@@ -29,6 +32,7 @@ module.exports = {
       },
       {
         "title": "AngularJS - Services",
+        "img": "https://i.pinimg.com/564x/c4/cb/80/c4cb802ab0f22028489d248f61942103.jpg",
         "author": "Ilan Cohen",
         "date": "1421186400000",
         "tags": ["JavaScript", "AngularJS"],
@@ -38,6 +42,7 @@ module.exports = {
       },
       {
         "title": "Grunt - Custom Tasks",
+        "img": "https://i.pinimg.com/564x/6c/cc/4e/6ccc4e1c86b43f1b9e84fcef5f92e7a4.jpg",
         "author": "Alex Ilyaev",
         "date": "1418162400000",
         "tags": ["Grunt", "Tools"],
@@ -47,6 +52,7 @@ module.exports = {
       },
       {
         "title": "Grunt - Intro",
+        "img": "https://i.pinimg.com/564x/70/0f/46/700f46ea06c717b8e62949390e734b76.jpg",
         "author": "Alex Ilyaev",
         "date": "1418162400000",
         "tags": ["Grunt", "Tools"],
@@ -56,6 +62,7 @@ module.exports = {
       },
       {
         "title": "jQuery - Events, AJAX",
+        "img": "https://i.pinimg.com/564x/c4/cb/80/c4cb802ab0f22028489d248f61942103.jpg",
         "author": "Amit Choukroun",
         "date": "1417557600000",
         "tags": ["JavaScript", "jQuery"],
@@ -65,6 +72,7 @@ module.exports = {
       },
       {
         "title": "jQuery - Selectors, DOM",
+        "img": "https://i.pinimg.com/564x/6c/cc/4e/6ccc4e1c86b43f1b9e84fcef5f92e7a4.jpg",
         "author": "Amit Choukroun",
         "date": "1417384800000",
         "tags": ["JavaScript", "jQuery"],

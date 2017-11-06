@@ -8,7 +8,7 @@ import './sidebar.scss'
 export default class SideBar extends React.Component{
   render(){
     return(
-      <div className="sidebar col-md-4">
+      <div className="sidebar">
 
         <Search/>
         <Filters/>

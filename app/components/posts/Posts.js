@@ -69,8 +69,9 @@ class Posts extends React.Component {
   render(){
     if(this.props.match.params.page)
     return(
-      <div className="container posts">
-        <div className="col-md-8">
+      <div className="posts">
+
+        <div className="main">
           <h2>Showing {this.props.postsLength} posts</h2>
           <hr/>
           <PostsList posts={this.props.posts}/>
@@ -85,7 +86,7 @@ class Posts extends React.Component {
     else if(this.props.location.search){
         return (
           <div className="container posts">
-              <div className="col-md-8">
+              <div className="">
                 {
                   this.state.postBySearch.length <= 0
                   ? <div>
@@ -117,7 +118,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return{
-    getPostsRange: (from, to) => dispatch(getPostsRange(from, to)),
+    getPostsRange: () => dispatch(getPostsRange()),
     getPostsLength: () => dispatch(getPostsLength()),
     setPostsLength: (length) => dispatch(setPostsLength(length)),
   }

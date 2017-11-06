@@ -1,0 +1,54 @@
+@import "../../../assets/css/colors";
+
+.post-item{
+  list-style: none;
+  width: 30%;
+  margin: 10px;
+  position: relative;
+
+  .post-image{
+    width: 100%;
+    img{
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+
+  .post-content{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    background: #eaeaea;
+    border-radius: 20px;
+    overflow: scroll;
+    height: 100%;
+    padding: 10px;
+    transition: all 0.5s ease;
+
+    h2{
+      color: $linkColor;
+    }
+
+    .author{
+      color: $linkColor;
+    }
+
+    .tag{
+      background-color: #777;
+      color: $fontColor;
+      font-size: 12px;
+      padding: 4px;
+      margin: 2px;
+      border-radius: 2px;
+    }
+
+    .post-footer{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .post-content:hover{
+    opacity: 1;
+  }
+}

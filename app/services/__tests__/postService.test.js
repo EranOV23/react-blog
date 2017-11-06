@@ -1,4 +1,6 @@
 import postsService from '../postsService';
+import moment from 'moment';
+
 
 const fullUrl = 'http://localhost:9090/api/posts';
 postsService.url = fullUrl;
@@ -43,8 +45,42 @@ describe('check postsService methods', () => {
   // searchPosts
   it('expect searchPosts return relevant posts', () => {
     expect.assertions(1);
+    return postsService.searchPosts('search', 'java')
+      .then( (data) => {
+        if(data[0])
+          return expect(JSON.stringify(data[0]).toLowerCase().includes("java")).toBe(true) 
+      } 
+    );
+  });
+
+  // filter categories
+  it('expect filter categories return relevant posts', () => {
+    expect.assertions(1);
     return postsService.searchPosts('category', 'javascript')
-      .then( data => expect(data[0].tags.includes("JavaScript")).toBe(true) );
+      .then( (data) => {
+        if(data[0])
+          return expect(data[0].tags.includes("JavaScript")).toBe(true) 
+      });
+  });
+
+  // filter authors
+  it('expect filter authors return relevant posts', () => {
+    expect.assertions(1);
+    return postsService.searchPosts('authors', 'alex')
+      .then( (data) => {
+        if(data[0])
+          return expect(data[0].author).toBe("Alex Ilyaev") 
+      });
+  });
+
+  // filter dates
+  it('expect filter dates return relevant posts', () => {
+    expect.assertions(1);
+    return postsService.searchPosts('month', 'January-2015')
+      .then( (data) => {
+        if(data[0])
+          return expect(moment(parseInt(data[0].date)).format("MMMM-YYYY")).toBe("January-2015") 
+      });
   });
 
 });

@@ -11,7 +11,7 @@ export function getAllPosts( postsService = PostsService ){
   }
 }
 
-export function getPostsRange( postsService = PostsService, from, to ) {
+export function getPostsRange( from, to, postsService = PostsService ) {
   return dispatch => {
     dispatch({type: ACTIONS.GET_POSTS_REQUEST});
 

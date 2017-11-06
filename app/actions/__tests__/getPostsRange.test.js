@@ -18,7 +18,7 @@ describe("get posts range action creator", ()=>{
     })
 
     it("should return posts range", ()=>{
-        let thunked = getPostsRange(mockPostsService);
+        let thunked = getPostsRange( 0, 3, mockPostsService);
         thunked(mockDispatch.dispatch);
 
         expect(mockDispatch.dispatch).toHaveBeenCalledTimes(2);

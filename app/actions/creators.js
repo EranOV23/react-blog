@@ -2,33 +2,33 @@ import * as ACTIONS from '../constants/index'
 import PostsService from '../services/postsService';
 
 
-export function getAllPosts(){
+export function getAllPosts( postsService = PostsService ){
   return dispatch => {
     dispatch({type: ACTIONS.GET_POSTS_REQUEST});
 
-    PostsService.getAllPosts()
+    postsService.getAllPosts()
+      .then( posts => dispatch({type: ACTIONS.GET_POSTS_RESPOND, posts }) )
+  }
+}
+
+export function getPostsRange( from, to, postsService = PostsService ) {
+  return dispatch => {
+    dispatch({type: ACTIONS.GET_POSTS_REQUEST});
+
+    postsService.getPostsRange(from, to)
       .then( response => dispatch({type: ACTIONS.GET_POSTS_RESPOND, response }) )
   }
 }
 
-export function getPostsRange(from, to) {
+export function getPostsLength( postsService = PostsService ){
   return dispatch => {
     dispatch({type: ACTIONS.GET_POSTS_REQUEST});
 
-    PostsService.getPostsRange(from, to)
-      .then( response => dispatch({type: ACTIONS.GET_POSTS_RESPOND, response }) )
-  }
-}
-
-export function getPostsLength(){
-  return dispatch => {
-    dispatch({type: ACTIONS.GET_POSTS_REQUEST});
-
-    PostsService.getPostsLength()
+    postsService.getPostsLength()
       .then( length => dispatch({type: ACTIONS.GET_POSTS_LENGTH, length }) )
   }
 }
 
-export function setPostsLength(length){
+export function setPostsLength(length = 0){
   return {type: ACTIONS.SET_POSTS_LENGTH, length };
 }

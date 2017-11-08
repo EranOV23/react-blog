@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './errormessage.scss';
+import './errorMessage.scss';
 
 export default class ErrorMessage extends React.Component{
     render(){

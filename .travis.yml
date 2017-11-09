@@ -5,8 +5,8 @@ install: npm install
 script:
 #- npm start
 - webpack -p
-- npm run test
-- jest
+#- npm run test
+- jest --watchAll
 
 - cd server
 - node app.js

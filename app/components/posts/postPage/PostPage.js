@@ -45,7 +45,6 @@ export default class PostPage extends React.Component {
                     <hr/>
                     {renderHTML(this.state.postHtml)}
                   </div>
-                  <SideBar/>
                 </div>
               </div>
             </div>)

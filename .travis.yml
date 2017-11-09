@@ -6,9 +6,11 @@ script:
 #- npm start
 - webpack -p
 #- npm run test
-- jest --watchAll
 
 - cd server
 - node app.js
+
+- jest --watchAll
+
 #- npm run server
 - cd ../

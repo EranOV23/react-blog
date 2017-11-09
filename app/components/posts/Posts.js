@@ -84,8 +84,7 @@ class Posts extends React.Component {
 
     else if(this.props.location.search){
         return (
-          <div className="posts">
-              <div className="">
+              <div className="overview">
                 {
                   this.state.postBySearch.length <= 0
                   ? <div className="title">
@@ -104,7 +103,6 @@ class Posts extends React.Component {
                     </div>
                 }
               </div>
-          </div>
         );
     }
 

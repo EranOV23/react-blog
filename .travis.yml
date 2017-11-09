@@ -9,4 +9,4 @@ script:
 - node app.js
 #- npm run server
 - cd ../
-- npm test
+- jest --watch

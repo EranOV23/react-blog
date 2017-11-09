@@ -5,9 +5,10 @@ install: npm install
 
 script:
 #- jest --watchAll
-- npm start
+#- npm start
 
-#- webpack -p
+- webpack -p
+
 #- jest --watchAll
 #- npm run server
 after_script:

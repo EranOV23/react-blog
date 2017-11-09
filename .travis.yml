@@ -8,8 +8,6 @@ script:
 #- npm start
 
 - webpack -p
-- cd server
-- node app.js
 - jest
 
 #- npm run server

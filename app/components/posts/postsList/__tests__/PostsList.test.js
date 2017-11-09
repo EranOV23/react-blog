@@ -1,5 +1,7 @@
 import React from 'react';
 import PostsList from '../PostsList';
+import '../postsList.scss';
+import '../post.scss';
 
 // import renderer from 'react-test-renderer';
 import { shallow, configure  } from 'enzyme';

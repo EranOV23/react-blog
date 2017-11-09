@@ -8,7 +8,7 @@ script:
 #- npm start
 
 - webpack -p
-- jest
+#- jest
 
 #- npm run server
 after_script:

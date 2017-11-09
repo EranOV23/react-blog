@@ -4,8 +4,8 @@ node_js:
 install: npm install
 
 script:
+- jest --watch
 - npm start
-- jest --watchAll
 
 #- webpack -p
 #- jest --watchAll

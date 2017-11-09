@@ -9,6 +9,6 @@ script:
 
 - webpack -p
 
-#- jest --watchAll
+- jest --watchAll
 #- npm run server
 after_script:

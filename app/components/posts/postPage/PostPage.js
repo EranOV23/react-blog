@@ -3,7 +3,6 @@ import renderHTML from 'react-render-html';
 import moment from 'moment';
 
 import PostsService from '../../../services/postsService';
-import SideBar from '../../sidebar/SideBar';
 
 import './postPage.scss';
 

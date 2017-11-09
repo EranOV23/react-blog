@@ -69,14 +69,13 @@ class Posts extends React.Component {
   render(){
     if(this.props.match.params.page)
     return(
-      <div>
+      <div className="overview">
         <div className="title">
           <h2>Showing {this.props.postsLength} posts</h2>
         </div>
-        <div className="main">          
+        <div className="main">
           <div className="posts">
             <PostsList posts={this.props.posts}/>
-            <Pager page={this.state.page}/>
           </div>
           <SideBar/>
         </div>

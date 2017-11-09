@@ -3,14 +3,10 @@ node_js:
   - "8"
 install: npm install
 
-before_script:
-- cd server
-- node app.js
-
 script:
-#- npm start
-- webpack -p
-#- npm run test
+- npm start
+- npm test
 
-- jest --watchAll
+#- webpack -p
+#- jest --watchAll
 #- npm run server

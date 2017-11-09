@@ -2,15 +2,15 @@ language: node_js
 node_js:
   - "8"
 install: npm install
+
+before_script:
+- cd server
+- node app.js
+
 script:
 #- npm start
 - webpack -p
 #- npm run test
 
-- cd server
-- node app.js
-
 - jest --watchAll
-
 #- npm run server
-- cd ../

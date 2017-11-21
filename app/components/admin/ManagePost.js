@@ -9,6 +9,7 @@ export default class AddPost extends React.Component {
         title: "",
         author: "",
         date: "",
+        img: "",
         tags: [],
         mdPath: "",
         htmlPath: "",
@@ -28,8 +29,8 @@ export default class AddPost extends React.Component {
         .then( (post)=> this.setPost(post) )
     }
 
-    setPost({title, author, date, tags, mdPath, htmlPath, description}){
-      this.setState({title, author, date, tags, mdPath, htmlPath, description})
+    setPost({title, author, date, img, tags, mdPath, htmlPath, description}){
+      this.setState({title, author, date, img, tags, mdPath, htmlPath, description})
     }
 
     edit(e){

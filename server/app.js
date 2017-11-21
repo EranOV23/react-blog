@@ -15,8 +15,9 @@ app.route("/api/posts")
   })
   .post((req,res)=>{
     let newPost = req.body;
-    let postsArr = posts.posts;    
+    let postsArr = posts.posts;
     req.body.tags = req.body.tags.split(",");
+    console.log(req.body);
     postsArr.push(req.body);
     console.log(`post: ${req.body.title}`);
     res.writeHead(302, {'Location': '/#/admin'});

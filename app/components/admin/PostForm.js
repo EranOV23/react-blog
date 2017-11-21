@@ -7,6 +7,7 @@ export default class PostForm extends React.Component {
         title: props.post.title,
         author: props.post.author,
         date: props.post.date,
+        img: props.post.img,
         tags: props.post.tags,
         mdPath: props.post.mdPath,
         htmlPath: props.post.htmlPath,
@@ -20,6 +21,7 @@ export default class PostForm extends React.Component {
             title: nextProps.post.title,
             author: nextProps.post.author,
             date: nextProps.post.date,
+            img: nextProps.post.img,
             tags: nextProps.post.tags,
             mdPath: nextProps.post.mdPath,
             htmlPath: nextProps.post.htmlPath,
@@ -28,6 +30,7 @@ export default class PostForm extends React.Component {
     }
 
     render() {
+      console.log(this.state.image)
         return (
           <form action="/api/posts" method="post">
               <div className="row">
@@ -54,6 +57,30 @@ export default class PostForm extends React.Component {
                            onChange={this.props.onChange}
                            required autoFocus/>
                   </div>
+                  <div className="form-group required">
+                    <label htmlFor="postDate">Date</label>
+                    <input type="text"
+                           className="form-control"
+                           id="postDate"
+                           name="date"
+                           placeholder="Post Date"
+                           value={this.state.date}
+                           onChange={this.props.onChange}
+                           required autoFocus/>
+                  </div>
+
+                  <div className="form-group required">
+                    <label htmlFor="postImage">Image</label>
+                    <input type="text"
+                           className="form-control"
+                           id="postImage"
+                           name="img"
+                           placeholder="Post Image"
+                           value={this.state.img}
+                           onChange={this.props.onChange}
+                           required autoFocus/>
+                  </div>
+
                   <div className="form-group">
                     <label htmlFor="postTags">Tags</label>
                     <input type="text"

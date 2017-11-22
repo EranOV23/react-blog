@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "8"
+install: npm install
+
+script:
+#- jest --watchAll
+#- npm start
+
+- webpack -p
+#- jest
+
+#- npm run server
+after_script:

@@ -9,6 +9,7 @@ export default class AddPost extends React.Component {
         title: "",
         author: "",
         date: "",
+        img: "",
         tags: [],
         mdPath: "",
         htmlPath: "",
@@ -28,12 +29,11 @@ export default class AddPost extends React.Component {
         .then( (post)=> this.setPost(post) )
     }
 
-    setPost({title, author, date, tags, mdPath, htmlPath, description}){
-      this.setState({title, author, date, tags, mdPath, htmlPath, description})
+    setPost({title, author, date, img, tags, mdPath, htmlPath, description}){
+      this.setState({title, author, date, img, tags, mdPath, htmlPath, description})
     }
 
     edit(e){
-      console.log(e.target.name, e.target.value);
       if(e.target.name === "tags"){
         let tags = e.target.value.split(",");
         console.log(tags);
@@ -47,7 +47,6 @@ export default class AddPost extends React.Component {
     }
 
     savePost(e, post){
-      console.log(e, post);
       this.setPost(post)
     }
 

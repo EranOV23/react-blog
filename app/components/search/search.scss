@@ -1,0 +1,21 @@
+@import '../../assets/css/colors.scss';
+
+.search{
+    display: flex;
+    input[type=search]{
+        background: $mainBackground;
+        padding: 10px;
+        width: 95%;
+        border-radius: 2px;
+        border: none;
+        outline: none;
+    }
+
+    .input-group-btn{
+        .btn{
+            height: 100%;
+            background: none;
+            border: 1px solid $mainBackground;
+        }
+    }
+}

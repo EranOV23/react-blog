@@ -2,15 +2,18 @@ import React from 'react';
 import moment from 'moment';
 import {NavLink} from 'react-router-dom';
 
+import './postsTable.scss';
+
 export default class PostsTable extends React.Component {
     constructor(props){
       super(props);
     }
-
+    
 
     renderPostRow(post, i){
         return (<tr key={i}>
             <th>{i+1}</th>
+            <td className="post-img"><img src={post.img}/></td>
             <td>{post.title}</td>
             <td>{post.author}</td>
             <td>{moment(parseInt(post.date)).format("DD MMM, YYYY")}</td>
@@ -24,6 +27,7 @@ export default class PostsTable extends React.Component {
             <thead>
             <tr>
               <th>#</th>
+              <th>Cover</th>
               <th>Title</th>
               <th>Author</th>
               <th>Date <span className="pull-right"><i className="glyphicon glyphicon-chevron-down"></i></span></th>

@@ -4,6 +4,8 @@ import PostsTable from './PostsTable';
 import postsService from '../../services/postsService';
 import {NavLink} from 'react-router-dom';
 
+import './admin.scss';
+
 export default class Admin extends React.Component{
 
   constructor(){
@@ -25,14 +27,13 @@ export default class Admin extends React.Component{
 
   render(){
     return (
-      <div className="container posts">
-        <div className="col-md-8">
-          <h2>Edit posts</h2>
-          <hr/>
-          <PostsTable posts={this.state.posts}/>
-          <NavLink className="btn btn-primary" to="admin/new/post">Add New Post</NavLink>
-        </div>
-        <SideBar/>
-      </div>)
+      <div className="admin-panel">
+        <h2>Edit posts</h2>
+          <div className="table">
+            <PostsTable posts={this.state.posts}/>
+            <NavLink className="btn btn-primary" to="admin/new/post">Add New Post</NavLink>
+          </div>
+      </div>
+      )
   }
 };

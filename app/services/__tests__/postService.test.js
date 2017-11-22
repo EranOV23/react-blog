@@ -66,10 +66,10 @@ describe('check postsService methods', () => {
   // filter authors
   it('expect filter authors return relevant posts', () => {
     expect.assertions(1);
-    return postsService.searchPosts('authors', 'alex')
+    return postsService.searchPosts('authors', 'eran')
       .then( (data) => {
         if(data[0])
-          return expect(data[0].author).toBe("Alex Ilyaev")
+          return expect(data[0].author).toBe("Eran Ovadia")
       });
   });
 

@@ -9,7 +9,7 @@ script:
 
 - webpack -p
 - cd server node app.js &
-- npm test
+- jest
 #- jest
 
 #- npm run server

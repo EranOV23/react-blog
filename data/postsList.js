@@ -3,7 +3,7 @@ module.exports = {
       {
         "title": "Beach Bum",
         "img": "https://i.pinimg.com/564x/c4/cb/80/c4cb802ab0f22028489d248f61942103.jpg",
-        "author": "Ilan Cohen",
+        "author": "Eran Ovadia",
         "date": "1421186400000",
         "tags": ["Vodka", "Liqueurs"],
         "mdPath": "data/posts/md/AngularJS - Controllers.md",
@@ -13,7 +13,7 @@ module.exports = {
       {
         "title": "Gin Revival",
         "img": "https://i.pinimg.com/564x/6c/cc/4e/6ccc4e1c86b43f1b9e84fcef5f92e7a4.jpg",
-        "author": "Ilan Cohen",
+        "author": "Eran Ovadia",
         "date": "1421186400000",
         "tags": ["Gin", "Juices"],
         "mdPath":  "data/posts/md/AngularJS - Modules.md",
@@ -23,7 +23,7 @@ module.exports = {
       {
         "title": "Ginapple",
         "img": "https://i.pinimg.com/564x/70/0f/46/700f46ea06c717b8e62949390e734b76.jpg",
-        "author": "Ilan Cohen",
+        "author": "Daniel Kalderon",
         "date": "1421186400000",
         "tags": ["Gin", "Juices"],
         "mdPath": "data/posts/md/AngularJS - Routes.md",
@@ -33,7 +33,7 @@ module.exports = {
       {
         "title": "Melafefonito",
         "img": "https://i.pinimg.com/564x/91/91/d2/9191d251e7053f245e17e3281e65bc01.jpg",
-        "author": "Ilan Cohen",
+        "author": "Daniel Kalderon",
         "date": "1421186400000",
         "tags": ["Gin", "Juices"],
         "mdPath": "data/posts/md/AngularJS - Services.md",
@@ -43,7 +43,7 @@ module.exports = {
       {
         "title": "Tequila Sunrise",
         "img": "https://i.pinimg.com/564x/6e/cc/3b/6ecc3be27ce4c07808f1a542b8756ae1.jpg",
-        "author": "Alex Ilyaev",
+        "author": "Daniel Kalderon",
         "date": "1418162400000",
         "tags": ["Tequila"],
         "mdPath": "data/posts/md/Grunt - Custom Tasks.md",
@@ -53,7 +53,7 @@ module.exports = {
       {
         "title": "Pisco sour",
         "img": "https://i.pinimg.com/564x/f3/16/c8/f316c8f6505f1c9935df2c6b94164821.jpg",
-        "author": "Alex Ilyaev",
+        "author": "Eran Ovadia",
         "date": "1418162400000",
         "tags": ["Pisco", "Liqueurs"],
         "mdPath": "data/posts/md/Grunt - Intro.md",
@@ -63,7 +63,7 @@ module.exports = {
       {
         "title": "Arak Hanamal 40",
         "img": "https://i.pinimg.com/564x/89/91/f7/8991f71b87d94ab822bad8657cd8a4ae.jpg",
-        "author": "Amit Choukroun",
+        "author": "Eran Ovadia",
         "date": "1447557600000",
         "tags": ["Anise"],
         "mdPath": "data/posts/md/jQuery - Events, AJAX.md",
@@ -73,7 +73,7 @@ module.exports = {
       {
         "title": "Gin Hendrix",
         "img": "https://i.pinimg.com/564x/fa/a9/90/faa99081c684143f6649ebccdb9f0485.jpg",
-        "author": "Amit Choukroun",
+        "author": "Eran Ovadia",
         "date": "1438394800000",
         "tags": ["Gin"],
         "mdPath": "data/posts/md/jQuery - Selectors, DOM.md",

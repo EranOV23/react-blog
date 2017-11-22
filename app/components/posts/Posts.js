@@ -69,38 +69,40 @@ class Posts extends React.Component {
   render(){
     if(this.props.match.params.page)
     return(
-      <div className="container posts">
-        <div className="col-md-8">
+      <div className="overview">
+        <div className="title">
           <h2>Showing {this.props.postsLength} posts</h2>
-          <hr/>
-          <PostsList posts={this.props.posts}/>
-          <Pager page={this.state.page}/>
         </div>
-
-        <SideBar/>
-
+        <div className="main">
+          <div className="posts">
+            <PostsList posts={this.props.posts}/>
+          </div>
+          <SideBar/>
+        </div>
       </div>
     );
 
     else if(this.props.location.search){
         return (
-          <div className="container posts">
-              <div className="col-md-8">
+              <div className="overview">
                 {
                   this.state.postBySearch.length <= 0
-                  ? <div>
+                  ? <div className="title">
                       <h2>{`Could not find any posts matching: ${this.state.query} `}</h2>
-                      <hr/>
                     </div>
                   : <div>
-                      <h2>{`Showing results matching: '${this.state.query}' `}</h2>
-                      <hr/>
-                      <PostsList query={this.state.query} posts={this.state.postBySearch}/>
+                      <div className="title">
+                        <h2>{`Showing results matching: '${this.state.query}' `}</h2>
+                      </div>
+                      <div className="main">
+                        <div className="posts">
+                          <PostsList query={this.state.query} posts={this.state.postBySearch}/>
+                        </div>
+                        <SideBar/>
+                      </div>
                     </div>
                 }
               </div>
-              <SideBar/>
-          </div>
         );
     }
 
@@ -117,7 +119,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return{
-    getPostsRange: (from, to) => dispatch(getPostsRange(from, to)),
+    getPostsRange: () => dispatch(getPostsRange()),
     getPostsLength: () => dispatch(getPostsLength()),
     setPostsLength: (length) => dispatch(setPostsLength(length)),
   }

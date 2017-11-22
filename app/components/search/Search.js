@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Route, Redirect, withRouter} from 'react-router';
 
+import './search.scss';
+
 
 class Search extends React.Component {
   constructor(props){
@@ -20,7 +22,8 @@ class Search extends React.Component {
     })
   }
 
-  searchInputChange(postQuery){
+  searchInputChange(postQuery, keyCode){
+    console.log(keyCode);
     this.setState({postQuery})
   }
 
@@ -35,19 +38,14 @@ class Search extends React.Component {
       </div>
     }
     return(
-      <div className="well">
-        <h4>Search</h4>
-        <div className="input-group">
-          <input type="search" name="search" value={this.state.postQuery}
-                 onChange={(e)=>this.searchInputChange(e.target.value)}/>
-          <span className="input-group-btn">
-              <button className="btn btn-default" type="button" onClick={ () => {
-                this.redirect(this.state.postQuery);
-              }}>
-                <span className="glyphicon glyphicon-search"></span>
-              </button>
-            </span>
-        </div>
+      <div className="search">
+        <input type="search" name="search" value={this.state.postQuery} placeholder="search"
+                onChange={(e)=>this.searchInputChange(e.target.value, e.keyCode)}/>
+        <span className="input-group-btn">
+            <button className="btn" type="button" onClick={()=>this.redirect(this.state.postQuery)}>
+              <span className="glyphicon glyphicon-search"></span>
+            </button>
+        </span>
       </div>
     );
   }

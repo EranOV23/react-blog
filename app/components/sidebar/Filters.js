@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import {withRouter} from 'react-router';
 
+import './filters.scss';
+
 
 class Filters extends React.Component {
 
@@ -19,7 +21,7 @@ class Filters extends React.Component {
 
     render() {
         return (
-          <div className="well">
+          <div className="fliters">
             <h3>Filters Posts</h3>
             <div className="list-group">
               <NavLink to="/posts/1" className={this.props.match.path==="/posts/:page" ? "list-group-item active": "list-group-item" }>

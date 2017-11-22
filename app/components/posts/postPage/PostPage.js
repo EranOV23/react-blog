@@ -3,7 +3,6 @@ import renderHTML from 'react-render-html';
 import moment from 'moment';
 
 import PostsService from '../../../services/postsService';
-import SideBar from '../../sidebar/SideBar';
 
 import './postPage.scss';
 
@@ -45,7 +44,6 @@ export default class PostPage extends React.Component {
                     <hr/>
                     {renderHTML(this.state.postHtml)}
                   </div>
-                  <SideBar/>
                 </div>
               </div>
             </div>)

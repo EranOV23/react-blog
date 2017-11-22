@@ -31,45 +31,45 @@ describe('check postsService methods', () => {
   // get post info
   it('expect getPostInfo return same post sent as argument', () => {
     expect.assertions(1);
-    return postsService.getPostInfo('AngularJS - Modules')
-      .then( data => expect(data.title).toBe("AngularJS - Modules") );
+    return postsService.getPostInfo('Beach Bum')
+      .then( data => expect(data.title).toBe("Beach Bum") );
   });
 
   // get post to edit
   it('expect getPostToEdit return same post sent as argument', () => {
     expect.assertions(1);
-    return postsService.getPostToEdit('AngularJS - Modules')
-      .then( data => expect(data.title).toBe("AngularJS - Modules") );
+    return postsService.getPostToEdit('Beach Bum')
+      .then( data => expect(data.title).toBe("Beach Bum") );
   });
 
   // searchPosts
   it('expect searchPosts return relevant posts', () => {
     expect.assertions(1);
-    return postsService.searchPosts('search', 'java')
+    return postsService.searchPosts('search', 'gin')
       .then( (data) => {
         if(data[0])
-          return expect(JSON.stringify(data[0]).toLowerCase().includes("java")).toBe(true) 
-      } 
+          return expect(JSON.stringify(data[0]).toLowerCase().includes("gin")).toBe(true)
+      }
     );
   });
 
   // filter categories
   it('expect filter categories return relevant posts', () => {
     expect.assertions(1);
-    return postsService.searchPosts('category', 'javascript')
+    return postsService.searchPosts('category', 'Vodka')
       .then( (data) => {
         if(data[0])
-          return expect(data[0].tags.includes("JavaScript")).toBe(true) 
+          return expect(data[0].tags.includes("Vodka")).toBe(true)
       });
   });
 
   // filter authors
   it('expect filter authors return relevant posts', () => {
     expect.assertions(1);
-    return postsService.searchPosts('authors', 'alex')
+    return postsService.searchPosts('authors', 'eran')
       .then( (data) => {
         if(data[0])
-          return expect(data[0].author).toBe("Alex Ilyaev") 
+          return expect(data[0].author).toBe("Eran Ovadia")
       });
   });
 
@@ -79,7 +79,7 @@ describe('check postsService methods', () => {
     return postsService.searchPosts('month', 'January-2015')
       .then( (data) => {
         if(data[0])
-          return expect(moment(parseInt(data[0].date)).format("MMMM-YYYY")).toBe("January-2015") 
+          return expect(moment(parseInt(data[0].date)).format("MMMM-YYYY")).toBe("January-2015")
       });
   });
 

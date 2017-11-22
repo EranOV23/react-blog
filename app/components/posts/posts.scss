@@ -1,62 +1,39 @@
 @import "../../assets/css/colors";
 
-.posts{
+.overview{
+  padding: 10px;
 
-
-  .posts-list{
-    padding-left: 0px;
-
-    .post-item{
-      list-style: none;
-
-      h2{
-        color: $linkColor;
-      }
-
-      .author{
-        color: $linkColor;
-      }
-
-      .tag{
-        background-color: #777;
-        color: $fontColor;
-        font-size: 12px;
-        padding: 4px;
-        margin: 2px;
-        border-radius: 2px;
-      }
-
-      .post-footer{
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-  }
-
-  .pager{
+  .main{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
-    a{
-      margin: 5px;
-      border-radius: 15px;
-      padding: 5px 15px;
-      background: none;
-      border: 1px solid #ddd;
-      color: $linkColor;
-
+    .posts{
+      width: 80%;
     }
 
-    a:hover{
-      opacity: 0.5;
-    }
+    .pager{
+      display: flex;
+      justify-content: space-between;
 
-    .disabled{
-      pointer-events: none;
-      cursor: default;
-      color: #dddddd;
-    }
+      a{
+        margin: 5px;
+        border-radius: 15px;
+        padding: 5px 15px;
+        background: none;
+        border: 1px solid #ddd;
+        color: $linkColor;
 
+      }
+
+      a:hover{
+        opacity: 0.5;
+      }
+
+      .disabled{
+        pointer-events: none;
+        cursor: default;
+        color: #dddddd;
+      }
+    }
   }
-
 }

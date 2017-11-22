@@ -1,25 +1,40 @@
 @import '../../assets/css/colors.scss';
 
 .navbar{
-  background-image: linear-gradient(rgb(60, 60, 60) 0px, rgb(34, 34, 34) 100%);
-  background-repeat: repeat-x;
+  background: white;
   color: $navFontColor;
-  border-radius: 0px;
-
+  border-bottom: 1px solid $mainBackground;
+  
   .nav-list{
     display: flex;
     align-items: center;
     list-style: none;
+    margin: 0 auto;
+    font-size: 20px;
+    
     li{
       margin: 10px;
-
+      padding: 10px;
       a{
         color: $navFontColor;
+        text-decoration: none;
 
         &.active{
-          color: $fontColor;
+          color: $fontColorActive;
         }
       }
+    }
+
+    li:not(.list-item-search):hover{
+      background: $mainBackground;
+      border-radius: 20px;
+      a{
+        text-decoration: none;        
+      }
+    }
+
+    .list-item-search{
+      width: 60%;
     }
   }
 }

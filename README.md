@@ -2,9 +2,10 @@
 
 ## Init
 
-Run `npm install` and then:
-`npm start` + `npm run server`
+1. `npm install` install project dependencies
+2. `npm start` will run webpack dev server on `http://localhost:8080/`
+3. `npm run server` will run node server on `http://localhost:9090/api/posts`
 
-## Instructions
+## test
 
-Open README.html in the browser
+1. `npm test` will run app test watcher using jest

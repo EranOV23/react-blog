@@ -8,7 +8,7 @@ script:
 #- npm start
 
 - webpack -p
-- npm run server &
+- node server/app.js &
 - jest
 #- jest
 

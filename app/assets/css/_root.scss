@@ -81,3 +81,13 @@ body {
   resize: none;
   width: 100%;
 }
+
+
+/**
+ * rewrite Bootstrap css
+ */
+
+.btn-primary:hover{
+  background: #BD081C;
+  border: none;
+}

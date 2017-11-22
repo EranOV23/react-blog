@@ -34,7 +34,6 @@ export default class AddPost extends React.Component {
     }
 
     edit(e){
-      console.log(e.target.name, e.target.value);
       if(e.target.name === "tags"){
         let tags = e.target.value.split(",");
         console.log(tags);
@@ -48,7 +47,6 @@ export default class AddPost extends React.Component {
     }
 
     savePost(e, post){
-      console.log(e, post);
       this.setPost(post)
     }
 

@@ -30,7 +30,6 @@ export default class PostForm extends React.Component {
     }
 
     render() {
-      console.log(this.state.image)
         return (
           <form action="/api/posts" method="post">
               <div className="row">

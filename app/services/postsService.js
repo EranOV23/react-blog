@@ -10,12 +10,8 @@ class PostsService{
 
   getAllPosts(){
     console.log("requested All Posts");
-    return fetch(this.url).then(response => response.json());
-  }
-
-  getPostsRange(from, to){
-    return this.getAllPosts()
-        .then( (data) => data.posts.slice(from, to) )
+    return fetch(this.url)
+      .then(response => response.json())
   }
 
   getPostsLength(){

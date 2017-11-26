@@ -7,15 +7,6 @@ export function getAllPosts( postsService = PostsService ){
     dispatch({type: ACTIONS.GET_POSTS_REQUEST});
 
     postsService.getAllPosts()
-      .then( posts => dispatch({type: ACTIONS.GET_POSTS_RESPOND, posts }) )
-  }
-}
-
-export function getPostsRange( from, to, postsService = PostsService ) {
-  return dispatch => {
-    dispatch({type: ACTIONS.GET_POSTS_REQUEST});
-
-    postsService.getPostsRange(from, to)
       .then( response => dispatch({type: ACTIONS.GET_POSTS_RESPOND, response }) )
   }
 }

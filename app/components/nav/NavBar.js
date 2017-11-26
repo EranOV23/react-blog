@@ -11,7 +11,7 @@ export default class NavBar extends React.Component{
         <ul className="nav-list">
           <li><NavLink exact to="/">The Blog App</NavLink></li>
           <li className="list-item-search"><Search/></li>
-          <li><NavLink to="/posts/1" activeClassName="active">Posts</NavLink></li>
+          <li><NavLink to="/posts" activeClassName="active">Posts</NavLink></li>
           <li><NavLink to="/admin" activeClassName="active">Admin</NavLink></li>
         </ul>
       </div>

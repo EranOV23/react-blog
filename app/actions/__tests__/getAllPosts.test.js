@@ -29,8 +29,8 @@ describe("get all posts action creator", ()=>{
 
         let [secondAction] = mockDispatch.dispatch.calls.argsFor(1);
         expect(secondAction.type).toBe("getPostsRespond");
-        expect(secondAction.posts).toBe(true);
-        
+        expect(secondAction.response).toBe(true);
+
     });
 });
 

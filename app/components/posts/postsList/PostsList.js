@@ -1,12 +1,9 @@
 import React from 'react';
-import Post from './Post';
+import Post from './post/Post';
 
 import './postsList.scss';
 
 export default class PostsList extends React.Component {
-    constructor(props){
-      super(props);
-    }
 
     renderPosts(post , i){
       return <Post post={post} key={i}/>

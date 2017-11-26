@@ -14,13 +14,6 @@ describe('check postsService methods', () => {
       .then( data => expect(data).toHaveProperty("posts", expect.any(Array)) )
   });
 
-  // get posts range
-  it('expect getPostsRange to slice the posts array', () => {
-    expect.assertions(1);
-    return postsService.getPostsRange(0, 4)
-      .then( data => expect(data.length).toBe(4) )
-  });
-
   // get posts length
   it('expect getPostsLength to return posts array length', () => {
     expect.assertions(1);

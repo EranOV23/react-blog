@@ -4,12 +4,17 @@
     display: flex;
     input[type=search]{
         background: $mainBackground;
+        color: $fontColorActive;
         padding: 10px;
         width: 95%;
         border-radius: 2px;
         border: none;
         outline: none;
     }
+    input[type=search]::placeholder{
+      color: $navFontColor;
+    }
+
 
     .input-group-btn{
         .btn{

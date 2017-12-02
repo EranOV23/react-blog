@@ -1,5 +1,4 @@
-module.exports = {
-    "posts": [
+module.exports = [
       {
         "title": "Beach Bum",
         "img": "https://i.pinimg.com/564x/c4/cb/80/c4cb802ab0f22028489d248f61942103.jpg",
@@ -8,7 +7,7 @@ module.exports = {
         "tags": ["Vodka", "Liqueurs"],
         "mdPath": "data/posts/md/AngularJS - Controllers.md",
         "htmlPath": "data/posts/html/AngularJS - Controllers.html",
-        "description": "Meat: 2 oz Grey goose la poire flavored vodka \n Produce: 1 Mint, Fresh \n Condiments: 1 dash Grenadine, 1 oz Lime juice, Fresh \n Beer, Wine & Liquor: 1/2 oz Cointreau, 1/2 oz Maraschino liqueur"
+        "description": "Meat: 2 oz Grey goose la poire flavored vodka \n Produce: 1 Mint, Fresh \n Condiments: 1 dash Grenadine, 1 oz Lime juice, Fresh \n Beer, Wine & Liquor: 1/2 oz Cointreau, 1/2 oz Maraschino liqueur",
       },
       {
         "title": "Gin Revival",
@@ -18,7 +17,7 @@ module.exports = {
         "tags": ["Gin", "Juices"],
         "mdPath":  "data/posts/md/AngularJS - Modules.md",
         "htmlPath": "data/posts/html/AngularJS - Modules.html",
-        "description": "The gin revival is big and it's here to stay. We made this delicious pomegranate gin cocktail with Wilderer Fynbos Gin."
+        "description": "The gin revival is big and it's here to stay. We made this delicious pomegranate gin cocktail with Wilderer Fynbos Gin.",
       },
       {
         "title": "Ginapple",
@@ -28,7 +27,7 @@ module.exports = {
         "tags": ["Gin", "Juices"],
         "mdPath": "data/posts/md/AngularJS - Routes.md",
         "htmlPath": "data/posts/html/AngularJS - Routes.html",
-        "description": "Apple & Gin Autumn Cocktail | Tart, slightly sweet and smooth with a fruity apple forward taste, this Apple & Gin Cocktail is filled to the brim with warm fall flavors."
+        "description": "Apple & Gin Autumn Cocktail | Tart, slightly sweet and smooth with a fruity apple forward taste, this Apple & Gin Cocktail is filled to the brim with warm fall flavors.",
       },
       {
         "title": "Melafefonito",
@@ -38,7 +37,7 @@ module.exports = {
         "tags": ["Gin", "Juices"],
         "mdPath": "data/posts/md/AngularJS - Services.md",
         "htmlPath": "data/posts/html/AngularJS - Services.html",
-        "description": "This twist on the classic gin and cucumber cocktail is sure to refresh you on any day of the week! Light, delicious and pretty easy to make!"
+        "description": "This twist on the classic gin and cucumber cocktail is sure to refresh you on any day of the week! Light, delicious and pretty easy to make!",
       },
       {
         "title": "Tequila Sunrise",
@@ -48,7 +47,7 @@ module.exports = {
         "tags": ["Tequila"],
         "mdPath": "data/posts/md/Grunt - Custom Tasks.md",
         "htmlPath": "data/posts/html/Grunt - Custom Tasks.html",
-        "description": "Condiments: 1/2 oz Grenadine \n Drinks: 4 oz Orange juice \n Frozen: 1 Ice cubes \n Desserts: 1 Maraschino cherries \n Beer, Wine & Liquor: 2 oz Tequila \n Other: orange slices, for garnishing umbrellas, optional for garnishing"
+        "description": "Condiments: 1/2 oz Grenadine \n Drinks: 4 oz Orange juice \n Frozen: 1 Ice cubes \n Desserts: 1 Maraschino cherries \n Beer, Wine & Liquor: 2 oz Tequila \n Other: orange slices, for garnishing umbrellas, optional for garnishing",
       },
       {
         "title": "Pisco sour",
@@ -58,7 +57,7 @@ module.exports = {
         "tags": ["Pisco", "Liqueurs"],
         "mdPath": "data/posts/md/Grunt - Intro.md",
         "htmlPath": "data/posts/html/Grunt - Intro.html",
-        "description": "Produce: 1 Lime, slices \n Refrigerated: 1 Egg white \n Condiments: 50 ml Lime juice 50 ml Sugar syrup \n Frozen: 1 large handful Ice \n Beer, Wine & Liquor: 3 drops Angostura bitters \n Other: 50ml Pisco"
+        "description": "Produce: 1 Lime, slices \n Refrigerated: 1 Egg white \n Condiments: 50 ml Lime juice 50 ml Sugar syrup \n Frozen: 1 large handful Ice \n Beer, Wine & Liquor: 3 drops Angostura bitters \n Other: 50ml Pisco",
       },
       {
         "title": "Arak Hanamal 40",
@@ -68,7 +67,7 @@ module.exports = {
         "tags": ["Anise"],
         "mdPath": "data/posts/md/jQuery - Events, AJAX.md",
         "htmlPath": "data/posts/html/jQuery - Events, AJAX.html",
-        "description": " One bottle HaNamal 40 Extra fine arak 40% 700ml Produced."
+        "description": " One bottle HaNamal 40 Extra fine arak 40% 700ml Produced.",
       },
       {
         "title": "Gin Hendrix",
@@ -78,7 +77,6 @@ module.exports = {
         "tags": ["Gin"],
         "mdPath": "data/posts/md/jQuery - Selectors, DOM.md",
         "htmlPath": "data/posts/html/jQuery - Selectors, DOM.html",
-        "description": "Hendrick's Gin is a brand of gin produced by William Grant & Sons in Girvan, Scotland, and launched in 1999."
+        "description": "Hendrick's Gin is a brand of gin produced by William Grant & Sons in Girvan, Scotland, and launched in 1999.",
       }
-    ]
-  };
+    ];

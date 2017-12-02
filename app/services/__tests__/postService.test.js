@@ -10,8 +10,20 @@ describe('check postsService methods', () => {
   // get all posts
   it('expect getAllPosts to return posts array', () => {
     expect.assertions(1);
+    const expected = [{
+      _id: "5a22f52afc2cc6d645d19471",
+      title: "Beach Bum",
+      img: "https://i.pinimg.com/564x/c4/cb/80/c4cb802ab0f22028489d248f61942103.jpg",
+      author: "Eran Ovadia",
+      date: "1421186400000",
+      tags: ["Vodka", "Liqueurs"],
+      mdPath: "data/posts/md/AngularJS - Controllers.md",
+      htmlPath: "data/posts/html/AngularJS - Controllers.html",
+      description: "Meat: 2 oz Grey goose la poire flavored vodka \n Produce: 1 Mint, Fresh \n Condiments: 1 dash Grenadine, 1 oz Lime juice, Fresh \n Beer, Wine & Liquor: 1/2 oz Cointreau, 1/2 oz Maraschino liqueur"
+    }
+  ];
     return postsService.getAllPosts()
-      .then( data => expect(data).toHaveProperty("posts", expect.any(Array)) )
+      .then( data => expect(data).toEqual(expect.arrayContaining(expected)) )
   });
 
   // get posts length

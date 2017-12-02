@@ -8,12 +8,12 @@ export default class PostsTable extends React.Component {
     constructor(props){
       super(props);
     }
-    
+
 
     renderPostRow(post, i){
         return (<tr key={i}>
             <th>{i+1}</th>
-            <td className="post-img"><img src={post.img}/></td>
+            <td className="post-img"><img src={post.img ? post.img : "https://image.flaticon.com/icons/svg/135/135754.svg"}/></td>
             <td>{post.title}</td>
             <td>{post.author}</td>
             <td>{moment(parseInt(post.date)).format("DD MMM, YYYY")}</td>

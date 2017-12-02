@@ -68,7 +68,7 @@ export default class PostForm extends React.Component {
                            placeholder="Post Image"
                            value={this.state.img}
                            onChange={this.props.onChange}
-                           required autoFocus/>
+                           autoFocus/>
                   </div>
 
                   <div className="form-group">

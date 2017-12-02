@@ -17,7 +17,7 @@ class PostsService{
   getPostsLength(){
     console.log("requested posts Length");
     return this.getAllPosts()
-      .then( response => response.posts.length )
+      .then( response => response.length )
   }
 
   getPostHtml(title){
@@ -28,20 +28,20 @@ class PostsService{
 
   getPostInfo(title){
     return this.getAllPosts()
-      .then( response => response.posts.filter( (post) => post.title === title ) )
+      .then( response => response.filter( (post) => post.title === title ) )
       .then( response => response[0])
   }
 
   getPostToEdit(title){
     return this.getAllPosts()
-      .then(response => response.posts.filter( (post) => post.title === title ) )
+      .then(response => response.filter( (post) => post.title === title ) )
       .then( response => response[0])
   }
 
   searchPosts(type, query){
     console.log(`search and filter posts by: ${type} - ${query}`);
     return this.getAllPosts()
-      .then(response => response.posts.filter( (post) => {
+      .then(response => response.filter( (post) => {
         if(type === "search")
           return JSON.stringify(post).toLowerCase().includes(query.toLowerCase());
         else if( type === "category")

@@ -6,7 +6,7 @@ import filtersReducer from './filtersReducer';
 function postsListReducer (state = null, action){
   switch(action.type){
     case GET_POSTS_RESPOND:
-      return [...action.response.posts];
+      return [...action.response];
   }
   return state
 }

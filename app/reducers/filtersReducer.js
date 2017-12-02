@@ -10,7 +10,7 @@ function categoriesReducer (state = null, action){
     switch(action.type){
       case GET_POSTS_RESPOND:
             let categoriesList = [];
-            action.response.posts.map((post)=>{
+            action.response.map((post)=>{
                 post.tags.map((tag)=>{
                     categoriesList.includes(tag)? null : categoriesList.push(tag)
                 })
@@ -24,7 +24,7 @@ function authorsReducer (state = null, action){
     switch(action.type){
         case GET_POSTS_RESPOND:
             let authorsList = [];
-            action.response.posts.map((post)=>{
+            action.response.map((post)=>{
                 authorsList.includes(post.author) ? null : authorsList.push(post.author)
             });
             return authorsList;
@@ -36,7 +36,7 @@ function dateReducer (state = null, action){
     switch(action.type){
         case GET_POSTS_RESPOND:
             let datesList = [];
-            action.response.posts.map((post)=>{
+            action.response.map((post)=>{
                 datesList.includes(post.date)? null : datesList.push(post.date)
             });
             let formattedList = [];

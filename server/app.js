@@ -14,8 +14,11 @@ let Post = require("./PostModel");
 router.route("/posts")
   .get((req, res) => {
     console.log('Requested node server');
-    Post.find(function (err, Post) {
-      if (err) return console.error(err);
+    Post.find( (err, Post) => {
+      if(err){
+        console.error(err);
+        return res.json(posts);
+      }
       res.json(Post);
     });
 

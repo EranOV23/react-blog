@@ -1,7 +1,7 @@
 # Cocktilities
 ### useful cocktails blog for every mood, event or season.
 
-This is a React web app, uses Redux for a state managment, mongoDB for DB and Travis for continuous integration service.
+This is a React web app, uses Redux for a state managment, mongoDB for DB and Travis for continuous integration.
 
 ## Init
 1. `npm install` install project dependencies

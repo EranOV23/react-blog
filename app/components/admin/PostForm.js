@@ -77,7 +77,7 @@ export default class PostForm extends React.Component {
                            className="form-control"
                            id="postTags" name="tags"
                            placeholder="Post Tags"
-                           value={this.state.tags.map( tag => tag )}
+                           value={this.state.tags}
                            onChange={this.props.onChange}
                            autoFocus/>
                     <p className="help-block">Separate multiple tags with a comma. e.g.<code>Grunt,Tools</code></p>

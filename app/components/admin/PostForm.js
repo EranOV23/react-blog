@@ -34,6 +34,7 @@ export default class PostForm extends React.Component {
           <form action="/api/posts" method="post">
               <div className="row">
                 <div className="col-sm-6">
+
                   <div className="form-group required">
                     <label htmlFor="postTitle">Title</label>
                     <input type="text"
@@ -45,6 +46,7 @@ export default class PostForm extends React.Component {
                            onChange={this.props.onChange}
                            required autoFocus/>
                   </div>
+
                   <div className="form-group required">
                     <label htmlFor="postAuthor">Author</label>
                     <input type="text"
@@ -53,17 +55,6 @@ export default class PostForm extends React.Component {
                            name="author"
                            placeholder="Post Author"
                            value={this.state.author}
-                           onChange={this.props.onChange}
-                           required autoFocus/>
-                  </div>
-                  <div className="form-group required">
-                    <label htmlFor="postDate">Date</label>
-                    <input type="text"
-                           className="form-control"
-                           id="postDate"
-                           name="date"
-                           placeholder="Post Date"
-                           value={this.state.date}
                            onChange={this.props.onChange}
                            required autoFocus/>
                   </div>
@@ -77,7 +68,7 @@ export default class PostForm extends React.Component {
                            placeholder="Post Image"
                            value={this.state.img}
                            onChange={this.props.onChange}
-                           required autoFocus/>
+                           autoFocus/>
                   </div>
 
                   <div className="form-group">
@@ -86,7 +77,7 @@ export default class PostForm extends React.Component {
                            className="form-control"
                            id="postTags" name="tags"
                            placeholder="Post Tags"
-                           value={this.state.tags.map( tag => tag )}
+                           value={this.state.tags}
                            onChange={this.props.onChange}
                            autoFocus/>
                     <p className="help-block">Separate multiple tags with a comma. e.g.<code>Grunt,Tools</code></p>

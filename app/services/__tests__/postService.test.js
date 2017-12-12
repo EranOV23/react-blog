@@ -11,7 +11,7 @@ describe('check postsService methods', () => {
   it('expect getAllPosts to return posts array', () => {
     expect.assertions(1);
     return postsService.getAllPosts()
-      .then( data => expect(data).toHaveProperty("posts", expect.any(Array)) )
+      .then( data => expect(data).toEqual(expect.any(Array)) )
   });
 
   // get posts length

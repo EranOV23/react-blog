@@ -18,7 +18,7 @@ export default class Admin extends React.Component{
 
   getBlogPosts(){
     postsService.getAllPosts()
-      .then((res)=>this.onPosts(res.posts))
+      .then((res)=>this.onPosts(res))
   }
 
   onPosts(posts){

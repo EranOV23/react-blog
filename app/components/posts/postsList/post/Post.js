@@ -13,7 +13,7 @@ export default class Post extends React.Component{
     return(
       <li className="post-item">
         <div className="post-image">
-          <img src={this.props.post.img} alt="post-image"/>
+          <img src={this.props.post.img ? this.props.post.img : "https://image.flaticon.com/icons/svg/135/135754.svg"} alt="post-image"/>
         </div>
 
         <div className="post-content">
